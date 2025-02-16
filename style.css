@@ -80,24 +80,61 @@ footer {
     color: #007bff; /* Change color on hover */
 }
 
-/* Education Section */
-.education-section {
-    margin: 20px;
+/* Timeline Container */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
 }
 
-.education-item {
-    margin-bottom: 30px;
+/* Vertical Line */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: #ddd;
+    transform: translateX(-50%);
 }
 
-.education-item h2 {
-    font-size: 1.5em;
+/* Timeline Item */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Alternate Items on Left and Right */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+/* Content Box */
+.timeline-content {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Date Styling */
+.timeline-date {
+    font-weight: bold;
+    color: #4CAF50;
+    display: block;
     margin-bottom: 5px;
 }
 
-.education-item p {
-    font-size: 1.1em;
-    margin: 5px 0;
-}
+
 
 /* Projects Section */
 .projects-container {
@@ -238,5 +275,3 @@ footer {
 .skill-icons img:hover {
     transform: scale(1.1);
 }
-
-
