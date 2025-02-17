@@ -5,11 +5,10 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: Georgia, sans-serif;
+    background-color: #333;
+    color: #f4f4f4;
     line-height: 1.6;
-
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -55,8 +54,8 @@ footer {
     text-align: center;
     margin-top: 20px;
     padding: 10px;
-    background-color: #333;
-    color: #fff;
+    background-color: #fff;
+    color: #333;
 }
 
 .profile-photo img {
@@ -69,7 +68,7 @@ footer {
 
 .social-icons a {
     margin: 0 5px;
-    color: #333;
+    color: #fff;
     font-size: 30px; /* Set the desired size for the icons */
     transition: transform 0.3s ease, color 0.3s ease;
     text-decoration: none;
@@ -120,6 +119,7 @@ footer {
 /* Content Box */
 .timeline-content {
     background: #fff;
+    color: #333;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -129,12 +129,10 @@ footer {
 /* Date Styling */
 .timeline-date {
     font-weight: bold;
-    color: #4CAF50;
+    color: #333;
     display: block;
     margin-bottom: 5px;
 }
-
-
 
 /* Projects Section */
 .projects-container {
@@ -188,6 +186,7 @@ footer {
 .project-card h3 {
     font-size: 1.3em;
     margin-bottom: 10px;
+    color: #333;
 }
 
 .project-card p {
@@ -230,6 +229,7 @@ footer {
 /* Skills Section */
 .skills-container {
     display: flex;
+    color: #333;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
