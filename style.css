@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Georgia, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: linear-gradient(to bottom right, #0a1f44, #153e75, #1a5ea0);
     color: #f4f4f4;
     line-height: 1.6;
@@ -15,9 +15,8 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.6); /* translucent black */
+    backdrop-filter: blur(4px);          /* optional: glassy effect */
 }
 
 nav ul {
@@ -169,6 +168,8 @@ footer {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 0 20px rgba(255, 251, 0, 0.3);
 }
 
 .project-card:hover {
@@ -228,14 +229,14 @@ footer {
 
 /* Skills Section */
 .skills-container {
-    display: flex;
+    display: grid;
     color: #333;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    max-width: 1000px;
+    gap: 30px;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 /* Category Cards */
@@ -247,6 +248,14 @@ footer {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
+}
+
+.skill-category-card p {
+    text-align: left;
+}
+
+.animation-card {
+    grid-column: 1 / 2; /* Places it directly under the first column */
 }
 
 .skill-category-card:hover {

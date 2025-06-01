@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Skills</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
@@ -13,18 +15,18 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="education.html">Education</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="skills.html">Skills</a></li>
+                <li><a href="skills.html">Skills & Interests</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>Skills</h1>
+        <h1>Skills & Interests</h1>
         
         <div class="skills-container">
     
             <div class="skill-category-card">
-                <h2>Programming Languages</h2>
+                <h2>Languages</h2>
                 <div class="skill-icons">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" />
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" />
@@ -34,32 +36,55 @@
             </div>
     
             <div class="skill-category-card">
-                <h2>Cybersecurity Tools</h2>
-                <div class="skill-icons">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" />
-                    <img src="img/burp.png" alt="Burp Suite" />
-                    <img src="img/kali.png" alt="Kali Linux" />
-                </div>
-            </div>
-    
-            <div class="skill-category-card">
-                <h2>Others</h2>
+                <h2>Tools</h2>
                 <div class="skill-icons">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="Blender" />
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg" alt="LaTeX" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/archlinux/archlinux-original.svg" alt="Arch Linux" />
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-original.svg" alt="Visual Studio" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-plain-wordmark.svg" alt="Unity"/>
                 </div>
             </div>
-    
+
+            <div class="skill-category-card animation-card">
+                <h2>Animation/Game Interests</h2>
+                <p><strong>3D Modelling:</strong> Creating low-poly and stylized environments using Blender; focusing on minimalist and modular design.</p>
+                <br>
+                <p><strong>Scripting:</strong> Scripting such as Blender Python scripts and Unity C# scripting to automate and organize objects in the space.</p>
+                <br>
+                <p><strong>Texturing & Coloring</strong> Working with object materials to stylize objects and enhancing the viewing experience in scenes.</p>
+                <br>
+                <p><strong>Lighting & Composition</strong> Analyzing how lighting, shadows and camera framing helps shape visual storytelling.</p>
+            </div>
+
+            <div class="skill-category-card">
+                <h2>Mathematics Interests</h2>
+                <p><strong>Abstract Algebra:</strong> Fascinated by algebraic structures such as groups, rings and fields, and how they unify mathematics.</p>
+                <br>
+                <p><strong>Algebraic Number Theory:</strong> Interested in how arithmetic and abstract algebra interests. </p>
+                <br>
+                <p><strong>Galois Theory:</strong> Deeply drawn to the connection between symmetry and solvability, in particular, through field extensions and Galois groups.</p>
+            </div>
+            
         </div>
     </main>
-    
-    
 
-    <footer>
-        <p>&copy; 2025 Takaya Ueno</p>
-    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+    <script>
+    VANTA.WAVES({
+      el: "body",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x4375c,
+      waveHeight: 14.00,
+      waveSpeed: 0.75,
+      zoom: 0.65
+    });
+    </script>
 </body>
 </html>
