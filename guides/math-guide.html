@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Home</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">About</a></li>
+                <li><a href="../education.html">Experience</a></li>
+                <li><a href="../blogs.html">Blogs</a></li>
+                <li><a href="../math.html">Mathematics</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn" onclick="return false;">Guides</a>
+                    <div class="dropdown-content">
+                        <a href="math-guide.html">Mathematics</a>
+                    </div>
+                </li>
+                <li><a href="../projects.html">Projects</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://github.com/santavalleytea" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/takaya-ueno" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.goodreads.com/user/show/162324050-takaya-ueno" target="_blank" class="social-link">
+                    <i class="fab fa-goodreads"></i>
+                </a>
+                <a href="mailto:takayaueno0712@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Learning Pure Mathematics</h1>
+        <h2>Where We Are Heading</h2>
+        <p>
+            For most of my life, mathematics felt…dull. It was all about memorizing formulas
+            , plugging in numbers and spitting out an answer. Rinse and repeat until it 
+            becomes second nature. I only realized much later — embarrassingly later 
+            than most of my peers — that this isn’t what mathematics really is. 
+            Of course, sometimes you are required to just crunch numbers in the way 
+            I described, but once I reached university, I started seeing what math actually 
+            looked like: symmetries in polygons, the way in which objects deform, 
+            the continuity of a function — and how all of these ideas somehow connect. 
+            Even the philosophy and history of mathematics turned out to be full of depth 
+            and complexity.
+            <br><br>
+            As someone who wasn’t exactly a “math person” in high school, I’ve come to 
+            believe that the issue isn’t that some people are just naturally good at it 
+            (which is a whole philosophical rabbit hole —  one I'll definitely write about 
+            later), but rather how mathematics is introduced. It’s rarely shown for what it 
+            truly is and can be; a creative, beautiful disciple. Think of it like this — if 
+            someone forced you to play the guitar by repeating a single scale endlessly, 
+            without ever hearing an actual song, you would probably lose interest quite 
+            early on. That, in my opinion, is how math is often taught.
+            <br><br>
+            Now, I will address that there is no sugar coating the difficulty in 
+            learning mathematics. Once you get past the basics, things become quite 
+            abstract, and proofs start to demand real structure and precision. But this 
+            is also where the fun starts. This guide is my attempt to share a roadmap for 
+            learning pure mathematics.
+            <br><br>
+            The aim is simple: to help you navigate the world of pure mathematics —  
+            to know where to start, what to expect and which books, in my opinion, are 
+            best to pick up. Each section gives a short overview of the topic, why it 
+            matters and a few trusted resources that I’ve used to learn from. My hope 
+            is that it makes the overwhelming landscape of mathematics feel slightly less 
+            intimidating, and hopefully, a little more exciting.
+            <br><br>
+        </p>
+        <h2>Just Before We Start</h2>
+        <p>
+            Before we dive straight into the roadmap, it’s worth mentioning that this 
+            guide doesn’t start completely from scratch. We won’t be covering things 
+            like “what are numbers” or “how to add and subtract”. It assumes you already 
+            have some familiarity with foundational high-school mathematics — algebra, 
+            functions, trigonometry and basic geometry.
+            <br><br>
+            That said, you don’t need to remember everything you learned in school. 
+            A decent grasp of these topics is more than enough. If you feel rusty, 
+            I highly recommend brushing up with <i><a href="https://www.khanacademy.org/math">
+            Khan Academy's</a></i> mathematics courses.
+            <br><br>
+        </p>
+        <h2>Getting Motivated</h2>
+        <p>
+            Here are a few sources that I’ve personally found inspiring — 
+            each one captures the beauty and creativity of mathematics in its own way:
+            <ul style="margin-left: 3em;">
+                <li><i><a href="https://www.amazon.com.au/Letters-Young-Mathematician-Ian-Stewart/dp/0465082327">
+                    Letters to a Young Mathematician </a></i>by Ian Stewart</li>
+                <li><i><a href="https://www.amazon.com.au/Man-Who-Loved-Only-Numbers/dp/0786884061">
+                    The Man Who Only Loved Numbers</a></i>by Paul Hoffman</li>
+                <li><i><a href="https://www.youtube.com/watch?v=MGp77CmhhLw">
+                    Finding X: A Mathematical Short Film</a></i>by Tibees</li>
+                <li><i><a href="https://www.youtube.com/watch?v=s_L-fp8gDzY">
+                    What Makes People Engage with Math</a></i>, a TED Talk by Grant Sanderson</li>
+            </ul>
+            You do not need to go through all of them, or any at all if you are already 
+            motivated enough. They are simply what gave me that extra spark of curiosity 
+            and motivation to keep learning. That being said, I still highly recommend it. 
+            <br><br>
+        </p>
+        <h2>How to Study Mathematics</h2>
+        <p>
+            While your choice of textbook definitely matters, how you study is 
+            ultimately the most important factor.
+            People will give their own opinions on study techniques that are 
+            effective to them, so it is important to note that my opinion in itself 
+            is subjective. So take the following as suggestions rather than rules — 
+            they’re a collection of techniques that are widely recommended and have worked out 
+            well for me
+            <ol style="margin-left: 3em;">
+                <li><b>First Read — Grasping the Big Picture </b></li>
+                <ul style="margin-left: 3em;">
+                    <li>
+                        Pick a chapter or section and read through it casually. 
+                        Write down the key definitions, theorem formulas, and a 
+                        brief sketch/outline of each proof. Don’t worry about mastering 
+                        everything yet — just get familiar with the ideas.
+                    </li>
+                </ul>
+                <li><b>Second Read — Rebuild from Memory </b></li>
+                <ul style="margin-left: 3em;">
+                    <li>
+                        Once you have a general picture of what’s going on, try to 
+                        reconstruct what you read without looking. Rewrite definitions 
+                        and proofs from memory, and explain them aloud as if you’re 
+                        teaching someone. You’ll quickly notice the gaps in your 
+                        understanding, which will be your cut to go back and fill them in.
+                    </li>
+                </ul>
+                <li><b>Active Practice — Problem Solving</b></li>
+                <ul style="margin-left: 3em;">
+                    <li>
+                        This is where real learning happens. Work through several problems 
+                        from each section — say, the first 4 to 6 exercises — and then pick 
+                        a few that seem particularly interesting or challenging. It is okay 
+                        to check solutions later, but make sure you’ve genuinely wrestled 
+                        with the problem first. 
+                    </li>
+                </ul>
+            </ol>
+        </p>
+        <br>
+        <h2>Mathematics Roadmap</h2>
+        <p>
+            The following are recommended readings for each topic area. Note that you do 
+            not need to go through every book listed — one per topic is enough. I’ve 
+            included multiple options since different explanations and styles appeal to 
+            different kinds of learners.
+            <br><br>
+        </p>
+        <h3>1. Calculus I, II, III</h3>
+        <p>
+            Calculus is one of the cornerstones of modern mathematics and one that most 
+            students would have encountered in high school (or earlier). It builds the 
+            foundation for understanding change, motion and accumulation — concepts that 
+            appear across many disciplines such as physics and engineering. Topics range 
+            from limits and derivatives to integrals, infinite series and multivariable 
+            extensions.
+        </p>
+        <h4>Recommended Reading:</h4>
+        <p>
+            <ul style="margin-left: 3em;">
+                <li><i><a href="https://www.amazon.com/Calculus-James-Stewart/dp/1285740629/ref=sr_1_1?dib=eyJ2IjoiMSJ9.wOve5ZFyiY8ZRzTrjhjqhfFdc792vYgHhc9-273ktwEMn9v1chD63i_TVzh0LuBZTy6OnCS51BwjNGDBVUrD4V1EDPrZgLKGDggR29met5bs3N4XWEPTp1vAUcTXFxfu6T48VyDG0W7rq0l0q1LzqyD2qeF_VWCH6GThLlN4seO8tENHtNr8rluSYS_kf5C4-oIjxV3pp37cCPi2rtejjMv2JrEPJz4Cln1NbLgqgHE.Ncxy9BhW4BmjYuyUjEjxaSqL4squrU2iptRiI7Vm7kY&dib_tag=se&keywords=calculus+8th+edition+stewart&qid=1761139749&sr=8-1">
+                Calculus: Early Transcendentals (8th Edition)</i></a> by James Stewart
+                 — Arguably the most well-known modern calculus textbook. It is quite 
+                 comprehensive and covers single variable, multivariable and vector 
+                 calculus, in addition to an introduction to differential equations. 
+                 Keep in mind that this amounts to about three to four semesters of study, 
+                 hence the density of the book.
+            </li>
+            </ul>
+            <br>
+        </p>
+        <h3>2. Proof Writing</h3>
+        <p>
+            We are now ready to learn how to write proofs, which is where you truly begin to think like a mathematician. Think of this as the transition from applying formulas to constructing logical arguments — the bridge between computational math and pure reasoning.
+        </p>
+        <h4>Recommended Readings:</h4>
+        <p>
+            <ul style="margin-left: 3em;">
+                <li><i><a href="https://www.amazon.com.au/Book-Proof-Richard-H-Hammack/dp/0989472124">
+                Book of Proof</i></a> by Richard Hammack — Highly recommended for beginners. It is free, clear and focuses on building intuition for logic and proof techniques.
+                </li>
+                <li><a href=""><i>How to Prove It 
+                </i></a> by Daniel J. Velleman — Another excellent introduction. Slightly more structured, with more exercises in logic and set theory. Both are great starting points, so pick whichever style you prefer.
+                </li> 
+            </ul>
+            <br>
+        </p>
+        <h3>3. Linear Algebra</h3>
+        <p>
+            Here, we study vector spaces and linear transformations, one of the most powerful tools in mathematics and can be considered the language of geometry, computer science and physics alike. It introduces ideas such as span, basis, eigenvalues and diagonalization that recur throughout mathematics.
+        </p>
+        <h4>Recommended Readings:</h4>
+        <p>
+            <ul style="margin-left: 3em;">
+                <li><a href="https://www.amazon.com.au/Linear-Algebra-Right-Sheldon-Axler/dp/3031410254"><i>Linear Algebra Done Right</i></a> by Sheldon Axler
+                    — A more abstract and proof-based approach. It focuses on understanding the structure of linear maps without relying on determinants. Still very much accessible and my personal recommendation.
+                </li>
+            </ul>
+            <ul style="margin-left: 3em;">
+                <li><a href="https://www.amazon.com/Introduction-Linear-Algebra-Gilbert-Strang/dp/1733146679/ref=sr_1_1?dib=eyJ2IjoiMSJ9.aKZMmRpsiVecTFcRBuqSIFm2a7rfvkO_V3kFiCdY9cXmp0RVlP0YgPAO_9W5-IqH8fAAWW4SJwT-_pEl48it0x9ETf8YiIL2ETZxub4ZdMGuZfpDfw8py3xioBcU3Cu_zmhvfTPfpW2KZYunE9N_CjkI_Kvx9MXcbt3eDkZfIb-CWRheNeB41a1n97C5R5MgAagwQnIKycQWWLEVuILAfn4swdxqccI8G2BYSfZM_Kc.b7-4i0isurYgP4EbVt1QUP2950O7x_21fMM8f8Rf3jA&dib_tag=se&keywords=gilbert+strang&qid=1761140356&s=books&sr=1-1"><i>Introduction to Linear Algebra</i></a>
+                    by Gilbert Strang — Computational and intuitive, excellent for beginners and applied learners, especially those who are still not fully comfortable with abstractness and heavy proofs.
+                </li>
+            </ul>
+            <br>
+        </p>
+        <h3>4. Group Theory</h3>
+        <p>
+            This is where things start to become more abstract and was definitely the point where I started to struggle more than I did in the past. Group theory explores symmetry — the mathematical study of transformations that preserves structure. It is the foundation of modern algebra and appears in pretty much everything (this is also one of my favorite areas of mathematics!).
+        </p>
+        <h4>Recommended Readings:</h4>
+        <p>
+            <ul style="margin-left: 3em;">
+                <li><a href="http://abstract.ups.edu/download.html"><i>Abstract Algebra: Theory and Applications</i></a>
+                    by Thomas W. Judson (Chapter 1-15) — A very approachable introduction with real-world applications in areas such as coding theory and cryptography (which you can skip if you prefer the theoretical side).
+                </li>
+            </ul>
+            <ul style="margin-left: 3em;">
+                <li><a href="https://www.amazon.com.au/Abstract-Algebra-3E-David-Dummit/dp/0471433349/ref=sr_1_1?crid=2OJ7MEP1RXLUK&dib=eyJ2IjoiMSJ9.4lpFqXqi4gfno3aacXf0Mp2bSUQyDE6xb2xLP0jL59ly50yxAqjTc4Q8FrDrnRA2.KetPmxm36O2cvtXo3zWmxHcp5-lkcR1Ofq0KJAm46lY&dib_tag=se&keywords=dummit+and+foote&qid=1761207069&sprefix=dummit+and+fo%2Caps%2C347&sr=8-1"><i>Abstract Algebra</i></a> by Dummit & Foote (Part I on Group Theory)
+                    — The classic, more rigorous treatment. A bit dry but extremely thorough; widely used in university courses.
+                </li>
+            </ul>
+            <br>
+        </p>
+        <h3>5. Real Analysis</h3>
+        <p>
+            A trip back to calculus,  real analysis rigorously formalizes it — limits, continuity, differentiation and integration — using precise definitions and proofs. It explores understanding the “why” in calculus.
+        </p>
+        <h4>Recommended Readings:</h4>
+        <p>
+            <ul style="margin-left: 3em;">
+                <li><a href="https://www.amazon.com.au/Understanding-Analysis-Stephen-Abbott/dp/1493927116/ref=sr_1_5?crid=34WJLPDRTL1A1&dib=eyJ2IjoiMSJ9.fyhiFdVyexA0Y4kCVw8tkD2IMiX_odZHf7xPhIzXcoT7kmPGyCdQFgZXaXsWOl86dhmRGXNACc4aI9VOX_Zux34X1QWuysAPzlZA_LLkFAPaVo_bDNzF0wLwsHBJDMELucmC6VXfeuvdLMWSJHEFgaqjsWgdL3i-MszFZXR382CFkSHZ0ARcr1XakSX34Ul-bqMO7b8dayuvTKtRQS7pfRa00dLyhzZ0z0OutvtmREOVu1utGjUZ2HT9foGBO9A8YtuUcQ_ZQu-uxa6cyBPk9Zr6zkWPE3CxcJD03tIxu7A.qLTmuj4nUOINH8QFeAMEYh5AX8l_o_gbPoI30Qh7lqE&dib_tag=se&keywords=stephen+abbott&qid=1761207084&sprefix=stephen+abbo%2Caps%2C235&sr=8-5"><i>Understanding Analysis</i></a>
+                    by Stephen Abbott — Friendly, conversational and my recommendation for a first encounter with rigorous analysis.
+                </li>
+                <li><a href="https://www.amazon.com.au/Principles-Mathematical-Analysis-Walter-Rudin/dp/9355325967/ref=sr_1_4?crid=22L4PAWNLZNTS&dib=eyJ2IjoiMSJ9.lN2VX5sBP4MaIUAVi7xYgYcBSSbfsYIMK0XHcx_XOFgD1h8biRTUY18OggZ5oQQWZF1tBhGomnIG2x_JVx1suzfW3XrF_mmFtbIRWTZj0EOfz98C5qb7uejX1XSZ0n8R429Gqc5KbXwIg2yB5pCqkrIw7XqMbOhOsX6VJa7tEIr2ANarVt5CdZh8TGv9dI4QWsTOF_r1rggXm-AXQuZ51uD0A6J_-n57Nn8FtjyIUlFQqatblHLaus1c3vWleOvExj7PDFXqVxoTC8v-Hk-UVTvkhc70Qw1JXpJoD0jZktk.qo8a2Dd3NoC-Jrib9A0kyjPi91f7cvWsXD2mkYtWDXc&dib_tag=se&keywords=rudin&qid=1761207097&sprefix=rudi%2Caps%2C237&sr=8-4"><i>Principles of Mathematical Analysis</i></a>
+                    by Walter Rudin — The famous “Baby Rudin”. It is elegant but terse and challenging. I strictly DO NOT recommend this as a first read, but rather, best tackled after Abbott or with sufficient guidance; used at top universities like MIT.
+                </li>
+            </ul>
+            <br>
+        </p>
+        <h3>6. Point-Set Topology</h3>
+        <p>
+            Another one of my favorite areas of mathematics. Topology studies spaces and the properties that remain unchanged under continuous deformation — also known as “rubber sheet geometry”. Point-set topology lays the formal groundwork for both modern geometry and analysis.
+        </p>
+        <h4>Recommended Readings:</h4>
+        <p>
+            <ul style="margin-left: 3em;">
+                <li><a href="https://www.amazon.com.au/Topology-Classic-Version-James-Munkres/dp/0134689518/ref=sr_1_1?crid=3UEZLKP80BVCR&dib=eyJ2IjoiMSJ9.MZ3yBEgkM1KcL9iDh4QDnYhg8ZRzwjg5WSH6IgogFtOwodNDQDG9g1yyYuRsXMwiRjkw080VQOI5mHdia-H2P4RMnaWjc10YxPxDwOPxxad08pDFav4hX4jO5XNSXWGM-L5zdwbbbXRQC4uy-cl5fZZtIrFZtHzYJMn33fKfq44.xVnj8Jwk8WhaYoOzQC7hxMOEXGZwBmGNIa5xbk72SyQ&dib_tag=se&keywords=james+munkres+topology&qid=1761207114&sprefix=james+munkres+topol%2Caps%2C228&sr=8-1"><i>Topology</i></a>
+                    by James Munkres — The classic and most widely used textbook. While rigorous, it is still very much accessible and is very detailed; recommended and ideal as a main reference.
+                </li>
+                <li><a href="https://www.math.toronto.edu/ivan/mat327/?resources"><i>MAT327 Course Notes</i></a>
+                    by Ivan Khatchatourian (University of Toronto) — Concise and well-explained notes. Not as detailed but still detailed enough for a first read and can also be used solely as a problem bank; check out the <a href="https://www.math.toronto.edu/ivan/mat327/docs/biglist.pdf">“Big List of Problems”</a>.
+                </li>
+            </ul>
+            <br>
+        </p>
+        <h3>7. Complex Analysis</h3>
+        <p>
+            Regarded as one of the most beautiful and elegant areas in mathematics, especially compared to its precursor real analysis. Complex analysis extends calculus into the complex plane — where differentiation and integration behave in a surprisingly elegant manner.
+        </p>
+        <h4>Recommended Readings:</h4>
+        <p>
+            <ul style="margin-left: 3em;">
+                <li><a href="https://www.amazon.com.au/Visual-Complex-Functions-Introduction-Portraits/dp/3034801793/ref=sr_1_1?crid=1PJJM5HHKVZ81&dib=eyJ2IjoiMSJ9.TfAEhfWQBhvnL0xUI6pB55OoXgGgpErmAp7YR63ydwLGjHj071QN20LucGBJIEps.cBKSJxxSE7ARSR0EzTUpw0dNuGPlXl0uOyAznL5YKkY&dib_tag=se&keywords=elias+wegert&qid=1761207149&sprefix=elias+weger%2Caps%2C235&sr=8-1"><i>Visual Complex Functions</i></a>
+                    by Elias Wegert — A stunning visual introduction that helps build intuition. Recommended if visuals are helpful to your learning.
+                </li>
+                <li><a href="https://www.amazon.com.au/Complex-Analysis-Elias-M-Stein/dp/0691113858/ref=sr_1_1?crid=1BP0VN5U3E3E9&dib=eyJ2IjoiMSJ9.Nz8YsCV5a-oq7smQ5v-VEk2ufoKJ3RJYyHvkxKJ5mCqD7ojaY92_XXxYELncSLKO0V4Mnjy5RPBSGqbo4I2hHNZQ8lJd94jDJLHBGNo3NN4lXz5h3YJ4lvp63cZtLYbs8y-hCP7w6m6d89S0sYPzctT6o-U0x-iKpqBnhCtB4QM.J6HuwG1kOP2dAwkuaziFJp4PGt1FeM717DUVk8q1CU0&dib_tag=se&keywords=complex+analysis+elias+m+stein&qid=1761207164&sprefix=complex+analysis+elias+m+st%2Caps%2C234&sr=8-1"><i>Complex Analysis</i></a>
+                     by Elias M. Stein and Rami Shakarchi — A rigorous, formal presentation in comparison. It is part of the Princeton Analysis series and is highly recommended.
+                </li>
+            </ul>
+            <br>
+        </p>
+        <h3>8. Rings, Fields & Galois Theory</h3>
+        <p>
+            I have already listed two from the above as one of my favorite areas, but to date, this is my utmost favorite area of mathematics that I have learnt. This area explores the algebraic structures underlying arithmetic and polynomial equations. It culminates in Galois theory — the link between symmetry and solvability, and one of the crown jewels of pure mathematics.
+        </p>
+        <h4>Recommended Readings:</h4>
+        <p>
+            <ul style="margin-left: 3em;">
+                <li><a href="http://abstract.ups.edu/download.html"><i>Abstract Algebra: Theory and Applications</i></a>
+                    by Thomas W. Judson (Chapters 16 - 23) — A continuation of the earlier sections on group theory.
+                </li>
+                <li><a href="https://www.amazon.com.au/Galois-Theory-Ian-Stewart/dp/103210158X/ref=sr_1_1?crid=2HGE5IO734JTX&dib=eyJ2IjoiMSJ9.25KtFsewPyO5wiRg9vjwtU0KS1FofXAHeiL3uKYs-Sbf7LBeuXDgLxztJf07UQVNdYf-ezBJbqjmlCfd1MVix0TYcgLVOgeIvqZlHlq-8_ORN6XpUrffZDnYBcXflR3FMotUSObFLiCC4vgPKFTVzELxy-XO3b5ETJExa2MOoatOJWuz8AtrT87Jw2-jn6ITAEcMRyVNXjIIQ1SW76wkbBs041HvlutalZ48lLfzxxXLCgyUpqgoLtMniAmUaw_SfkH7d9JbPR--MIBbAxgtoMaMePTvVA3bQu5wYEkgSmw.-dH8DcojioE9Y7P2W9HK1hxBEdkZi6AGJv-iDF5A_zI&dib_tag=se&keywords=ian+stewart+galois&qid=1761207202&sprefix=ian+stewart+galo%2Caps%2C221&sr=8-1"><i>Galois Theory</i></a>
+                    by Ian Stewart — A concise and engaging standalone treatment, best read after learning rings and fields.
+                </li>
+                <li><a href="https://www.amazon.com.au/Abstract-Algebra-3E-David-Dummit/dp/0471433349/ref=sr_1_1?crid=2OJ7MEP1RXLUK&dib=eyJ2IjoiMSJ9.4lpFqXqi4gfno3aacXf0Mp2bSUQyDE6xb2xLP0jL59ly50yxAqjTc4Q8FrDrnRA2.KetPmxm36O2cvtXo3zWmxHcp5-lkcR1Ofq0KJAm46lY&dib_tag=se&keywords=dummit+and+foote&qid=1761207069&sprefix=dummit+and+fo,aps,347&sr=8-1"><i>Abstract Algebra</i></a>
+                    by Dummit & Foote (Parts II - IV) — The comprehensive reference mentioned earlier for a deeper dive.
+                </li>
+            </ul>
+            <br>
+        </p>
+        <h2>Electives and Branches</h2>
+        <p>
+            Beyond the core roadmap, there are many directions you can explore depending on your interests — whether you’re drawn to logic, geometry, analysis or even the philosophy behind mathematics. Below are some areas worth diving into once you’re comfortable with the fundamentals. Note that you do not need to complete the entire roadmap to explore the following.
+            <br><br>
+        </p>
+        <h3>Number Theory</h3>
+        <p>
+            Number theory is often described as the purest form of mathematics. It is the study of integers and their underlying structures. A place where simple questions lead to surprisingly deep results, from modular arithmetic to prime distributions. 
+        </p>
+        <ul style="margin-left: 3em;">
+            <li><a href="https://www.amazon.com.au/ELEMENTARY-NUMBER-THEORY-David-Burton/dp/9355325126/ref=sr_1_1?crid=2U85DKBC17MC9&dib=eyJ2IjoiMSJ9.VGEdeCU5I4d3a1c3jC572K8Hsx5Bw2eHJZA5CFlOn7cxPZPaVmhtNJa6QvZJ6sYO-yLCxJYgg_Fmy7sdeVP81YZRrzfu-r0GEAhgGIBf7ucW3uv67Pe5eVQpsOghQSoVxz9ndV3ka7kkfB9P9FEhLIstDqsiM50c417z7i8qc2dpElCthZRf2UXBqPmoIxmNVSDA2UsEanLtIP2cMmxek0WzGx5KcjD83nEwhAeM4PucYwtc_5mAkwFduP3OtxMr0-WYyx58fCIxRTmu8E7WjcR6oMcsXszscoK9ZIQz3cM.DlCo99cNdjmmhxUkw6TkxWuolycu3H7br6IsStmH3kQ&dib_tag=se&keywords=david+m+burton&qid=1761207213&sprefix=david+m+bur%2Caps%2C249&sr=8-1"><i>Elementary Number Theory</i></a>
+                by David M. Burton — A classic and well-balanced introduction with clear explanations and plenty of exercises. Highly recommended as a first read.
+            </li>
+            <li><a href="https://www.amazon.com.au/Introduction-Theory-Numbers-G-Hardy/dp/0199219869/ref=sr_1_1?crid=2J6ZNPJTF5ZJZ&dib=eyJ2IjoiMSJ9.HDp8L6qZTYgIZEqxYViHEZEMe5XKpq2CJKmW-ih13qAyMcDsk1SIxkWdW8n-t9nHsuI-IX6j0xoEp-aZ3C2XtmupfZwtoyVaFC1nlRo5eWCHZ37X-VP-IzAVSoLKqz9CRyEqXmamIxfee7XWdPofPVLFbp_QFF_q7eFdkFMl7grSaIaxT6UPjTwM_5o4s_p0iSI4xS3PfcApXw-0qYBWpu2PyCIlKzE6qqPeq6AOrLOoB-UrycjhidPeXk99XKwpw3fbhdc_4z0-iVsBhBo7iHhzG5iGeq4bFwGi_tW6UeA.epIz1uUxMC7i72a6kM-xb3eg0PMSg-i9gRkuhSrqOoU&dib_tag=se&keywords=introduction+to+the+theory+of+numbers&qid=1761207230&sprefix=introduction+to+the+theory+of+num%2Caps%2C240&sr=8-1"><i>An Introduction to the Theory of Numbers</i></a>
+                by G. H. Hardy and Edward M. Wright. — A timeless reference, which you may notice is written by the famous G.H Hardy. It is less of a textbook and more of an enrichment read — elegant and full of insight. A must-read for anyone serious about number theory.
+            </li>
+        </ul>
+        <br>
+        <h3>Measure Theory</h3>
+        <p>
+            Measure theory extends integration beyond Riemann’s approach and forms the foundation for probability, real analysis, and functional analysis. It provides the rigorous language for “size,” “volume,” and “convergence” in modern mathematics.
+        </p>
+        <h4>Recommended Readings:</h4>
+        <ul style="margin-left: 3em;">
+            <li><a href="https://www.amazon.com.au/Real-Analysis-Measure-Integration-Hilbert/dp/0691113866"><i>Measure Theory, Integration and Hilbert Spaces</i></a>
+                by Elias M.Stein and Rami Shakarchi — A concise and beautifully written introduction, ideal if you’ve already completed real analysis.
+            </li>
+            <li><a href="https://www.amazon.com.au/Measure-Integration-Analysis-Sheldon-Axler/dp/3030331423/ref=sr_1_1?crid=3MSRXLWPRIBWV&dib=eyJ2IjoiMSJ9.3Kz5kDKhoMbRE4gY-JtS8A.P7--wmjFaPk6rpjARe59gtm80BxzJj5QKUIVmhqawgA&dib_tag=se&keywords=sheldon+axler+measure&qid=1761207282&s=books&sprefix=sheldon+axler+meas%2Cstripbooks%2C232&sr=1-1"><i>Measure, Integration and Real Analysis</i></a>
+                by Sheldon Axler — Gentle, modern, and clear. Focuses on intuition without sacrificing precision — great for self-learners.
+            </li>
+        </ul>
+        <br>
+        <h3>Differential Geometry</h3>
+        <p>
+            Differential geometry explores smooth curves, surfaces, and higher-dimensional manifolds using calculus and linear algebra. It sits at the intersection of geometry and analysis.
+        </p>
+        <h4>Recommended Reading:</h4>
+        <ul style="margin-left: 3em;">
+            <li><a href="https://www.amazon.com.au/Differential-Geometry-Curves-Surfaces-MANFREDO/dp/0486806995/ref=sr_1_1?crid=18IA2XY59DAXH&dib=eyJ2IjoiMSJ9.yz01iWy3VP6aAqUxzv9FxHuDhXbmynfe3O5nUzaPJvTl8cC7OpE5rM04JJwMNEV9tFnj-CGJib1lkW9-XugvQOHLUtOb9bot4dDuL7qGDNZPshhF9GAqJ8q92Bw55fWaTvWnki0B8rHiRZUImhLd0blGto2JQ5F8z6QHuoxsrzfzEF-6kEPhcl5E2wv6x657kBbybw5Ck50ZjktlwhGYeZZxZ-wYf-sxKhKs7IHT2NU.y9J1IBf9wzg220Mk1vIURmdaGykHJB-_NoK_G4rKyRY&dib_tag=se&keywords=do+carmo&qid=1761207291&s=books&sprefix=do+ca%2Cstripbooks%2C230&sr=1-1"><i>Differential Geometry of Curves and Surfaces</i></a>
+                by Manfredo P. do Carmo — A beautiful and classic introduction. Accessible yet rigorous, with strong geometric intuition supported by formal proofs.
+            </li>
+        </ul>
+        <br>
+        <h3>Discrete Mathematics</h3>
+        <p>
+            Discrete mathematics deals with countable, distinct structures — graphs, logic, combinatorics, algorithms, and proofs by induction. It’s an essential area for computer science, cryptography, and combinatorial reasoning.
+        </p>
+        <h4>Recommended Reading:</h4>
+        <ul style="margin-left: 3em;">
+            <li><a href="https://www.amazon.com.au/Discrete-Mathematics-Its-Applications-ISE/dp/1266191542/ref=sr_1_1?crid=1QN9ZZW14FFT1&dib=eyJ2IjoiMSJ9.NfRLzRrY8lpqUr8b1PDLBg_q8vlfOU5bnc3KoGdKTq8XLFd69uv1x6eRfG5sAbWI_ai_5elPS9eKkzWpOzVjV1Bb125M_gFayWxgtV7wMdCn6Lw8GWQOP2vem6RQvAGejIhDJAf2NecpucVVzg_PKMHh5TVuWCGJbA70kfWn_UseMlu3BYbSeeh3zu0Ux2wCek-tZrSWLzH6bKUHGZ8J50jt2ACitDP91DESh4-yQEk.OX37Qh_J_PxNqJnB2UwrO4q_kuCCIz_J-CJNy11YkuU&dib_tag=se&keywords=kenneth+h+rosen&qid=1761207306&s=books&sprefix=kenneth+h+ro%2Cstripbooks%2C241&sr=1-1"><i>Discrete Mathematics and its Applications</i></a>
+                by Kenneth H. Rosen —  The standard introduction used in countless undergraduate courses. Broad in scope and well-suited for beginners and computer science students alike.
+            </li>
+        </ul>
+        <br>
+        <h3>Philosophy of Mathematics</h3>
+        <p>
+            For those interested in the foundations of mathematics — its logic, meaning, and nature — philosophy of mathematics examines what mathematical truth actually is. It connects the formal with the abstract, exploring questions of existence and certainty.
+        </p>
+        <h4>Recommended Readings:</h4>
+        <ul style="margin-left: 3em;">
+            <li><a href="https://www.amazon.com.au/Thinking-About-Mathematics-Philosophy-Shapiro/dp/B01JQEIT0S/ref=sr_1_1?crid=3QSQ58X8S0XPJ&dib=eyJ2IjoiMSJ9.fvAuQSpAWJCIroaLwBslGg.5dPMYOoZwpXKM8C46vM6jxsokGmcX_sUDsI70SHiZ9A&dib_tag=se&keywords=stewart+shapiro+thinking+about&qid=1761207322&s=books&sprefix=stewart+shapiro+thinking+about%2Cstripbooks%2C214&sr=1-1"><i>Thinking about Mathematics</i></a>
+                by Stewart Shapiro — A clear, thoughtful introduction to the major schools of thought — Platonism, logicism, formalism, and constructivism. A great starting point for exploring how mathematics fits into philosophy.
+            </li>
+        </ul>
+    </main>
+</body>
+</html>

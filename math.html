@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="education.html">Experience</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="math.html">Mathematics</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn" onclick="return false;">Guides</a>
+                    <div class="dropdown-content">
+                        <a href="guides/math-guide.html">Mathematics</a>
+                    </div>
+                </li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://github.com/santavalleytea" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/takaya-ueno" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.goodreads.com/user/show/162324050-takaya-ueno" target="_blank" class="social-link">
+                    <i class="fab fa-goodreads"></i>
+                </a>
+                <a href="mailto:takayaueno0712@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+    <section class="math-section">
+        <h1>Mathematics Expositions</h1>
+        <div class="math-grid">
+            <div class="math-card">
+                <div class="math-image">
+                    <img src="img/pi.png" alt="">
+                    <p class="image-credit">
+                        "PI Island watermarked" by 
+                        <a href="https://www.flickr.com/photos/21649179@N00/" target="_blank">fdecomite</a>
+                        licensed under
+                        <a href="https://creativecommons.org/licenses/by/2.0/?ref=openverse" target="_blank">CC BY 2.0</a>
+                    </p>
+                </div>
+            
+            <div class="math-content">
+                <h2>The Paradox of π</h2>
+                <center><h4>12/09/2024</h4></center>
+                <p>
+                How can a "number" that has an infinite decimal representation be used in everyday life?
+                Why does it come up all the time in fields outside of mathematics such as physics and 
+                engineering? 
+                <br><br>
+                Here, I explore the irrationality of π, the history of the development of π and why it
+                remains a paradox between finite value and infinite representation.
+                </p>
+                <a href="math/The_Paradox_of_Pi.pdf" target="_blank">Read PDF</a>
+            </div>
+        </div>
+
+        <div class="math-card">
+            <div class="math-image">
+                <img src="img/poly.png" alt=""> 
+                <p class="image-credit">
+                "Quadratic formula via completing the square" by 
+                <a href="https://commons.wikimedia.org/wiki/User:Jacob_Rus" target="_blank">Jacob Rus</a>, 
+                licensed under 
+                <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
+                </p>
+            </div>
+        
+            <div class="math-content">
+                <h2>The Insolvability of the Quintic</h2>
+                <center><h4>06/29/2025</h4></center>
+                <p>
+                My attempt at exploring how the symmetries of polynomial roots — and the rise of group theory —
+                reveal the hidden structure behind equations, and why the general quintic resists
+                solution by radicals.
+                <br><br>
+                Note that this exposition requires some background in abstract algebra.
+                </p>
+                <a href="math/The_Insolvability_of_the_Quintic.pdf" target="_blank">Read PDF</a>
+            </div>
+        </div>
+
+        <div class="math-card">
+            <div class="math-image">
+                <img src="img/fermats.png" alt=""> 
+                <p class="image-credit">
+                Image generated with OpenAI’s ChatGPT (DALL-E model)
+                </p>
+            </div>
+        
+            <div class="math-content">
+                <h2>Proofs for Fermat's Little Theorem</h2>
+                <center><h4>07/02/2025</h4></center>
+                <p>
+                From modular arithmetic to abstract algebra, Fermat's Little Theorem appears in many forms. In this 
+                paper, we walk through five distinct proofs of the theorem, each touching on a different corner of
+                mathematics.
+                </p>
+                <a href="math/Fermat_s_Little_Theorem.pdf" target="_blank">Read PDF</a>
+            </div>
+        </div>
+        </div>
+    </section>
+    </main>
+</body>
+</html>

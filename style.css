@@ -5,13 +5,23 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to bottom right, #f2f4f6, #d8dde3, #c7ccd3);
-    color: #222;
+    font-family: "Times New Roman", Times, serif;
+    background: #fff;
+    color: #000;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+a {
+  color: inherit;            /* makes links the same color as surrounding text */
+  text-decoration: underline; /* keeps the underline */
+}
+
+a:hover {
+  color: inherit;            /* stays the same color on hover too */
+  text-decoration: underline; /* still underlined */
 }
 
 header {
@@ -19,30 +29,132 @@ header {
     backdrop-filter: blur(4px);          /* optional: glassy effect */
 }
 
-nav ul {
-    list-style: none;
+nav {
+    display: flex;
+    justify-content: space-between; /* pushes icons right, links left */
+    align-items: center;
+    padding: 10px 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
     text-align: center;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 15px;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
 }
 
-nav ul li a {
+.nav-links li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
 }
 
-nav ul li a:hover {
+.nav-links li a:hover {
     text-decoration: underline;
 }
 
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Button (the "Guides" link) */
+.dropbtn {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+}
+
+/* Dropdown Content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000; /* dropdown background */
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px;
+  text-align: left;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+  color: #000;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Hover Effects */
+.dropdown-content a:hover {
+  background-color: #000;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Keep "Guides" highlighted while open */
+.dropdown:hover .dropbtn {
+  text-decoration: underline;
+}
+
+
+/* Social Icons on Right */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    color: #007bff;
+}
+
+.intro-box {
+    max-width: 700px;              /* controls line length */
+    margin: 10px auto;            /* centers horizontally + spacing from top */
+    padding: 30px;                 /* inner space */
+    background: #fff;              /* white box background */
+    border: 1.5px solid #000;      /* black border for classic feel */
+    border-radius: 8px;            /* optional rounding */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* soft shadow */
+    text-align: left;              /* natural paragraph flow */
+    line-height: 1.8;
+    font-family: "Times New Roman", Times, serif;
+}
+
 main {
-    flex: 1;
-    margin: 20px;
-    text-align: center;
+  max-width: 1100px;         /* controls readable width */
+  margin: 80px auto;        /* centers the block horizontally */
+  padding: 0 20px;          /* adds inner space */
+  line-height: 1.8;
+  font-family: "Times New Roman", Times, serif;
+}
+
+main h1, h2 {
+  text-align: center;       /* center ONLY the heading */
+  margin-bottom: 30px;
+}
+
+main p {
+  text-align: left;         /* keeps body text normal */
+  word-wrap: break-word;    /* breaks long words instead of overflowing */
 }
 
 h1 {
@@ -65,23 +177,11 @@ footer {
     margin: 20px auto;
 }
 
-.social-icons a {
-    margin: 0 5px;
-    color: #fff;
-    font-size: 30px; /* Set the desired size for the icons */
-    transition: transform 0.3s ease, color 0.3s ease;
-    text-decoration: none;
-}
-
-.social-icons a:hover {
-    transform: scale(1.1);
-    color: #007bff; /* Change color on hover */
-}
-
 /* Timeline Container */
 .timeline {
     position: relative;
-    max-width: 800px;
+    max-width: 900px;
+    width: 100%;
     margin: 50px auto;
 }
 
@@ -90,7 +190,8 @@ footer {
     content: "";
     position: absolute;
     left: 50%;
-    width: 4px;
+    top: 0;
+    width: 3px;
     height: 100%;
     background-color: #ddd;
     transform: translateX(-50%);
@@ -100,13 +201,13 @@ footer {
 .timeline-item {
     position: relative;
     width: 50%;
-    padding: 20px;
+    padding: 20px 40px;
     box-sizing: border-box;
 }
 
 /* Alternate Items on Left and Right */
 .timeline-item:nth-child(odd) {
-    left: 0;
+    right: 15%;
     text-align: right;
 }
 
@@ -118,19 +219,21 @@ footer {
 /* Content Box */
 .timeline-content {
     background: #fff;
-    color: #333;
+    color: #000;
+    width: 150%;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    display: inline-block;
     position: relative;
 }
 
 /* Date Styling */
 .timeline-date {
     font-weight: bold;
-    color: #333;
+    color: #000;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 /* Projects Section */
@@ -228,33 +331,6 @@ footer {
     color: #0056b3;
 }
 
-/* Skills Section */
-.skills-container {
-    display: grid;
-    color: #333;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    gap: 30px;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Category Cards */
-.skill-category-card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-}
-
-.skill-category-card p {
-    text-align: left;
-}
-
 .animation-card {
     grid-column: 1 / 2; /* Places it directly under the first column */
 }
@@ -268,20 +344,204 @@ footer {
     margin-bottom: 10px;
 }
 
-/* Skill Icons inside Cards */
-.skill-icons {
-    display: flex;
-    flex-wrap: wrap;
+/* === MATH EXPOSITION SECTION (3-per-row layout like blog) === */
+.math-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.math-section h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+/* Grid layout */
+.math-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
     justify-content: center;
-    gap: 10px;
+    align-items: stretch;
 }
 
-.skill-icons img {
-    width: 50px;
-    height: 50px;
-    transition: transform 0.3s ease-in-out;
+/* Each card */
+.math-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* ensures top (text) and bottom (button) spacing */
+    text-align: left;
+    transition: transform 0.3s ease;
 }
 
-.skill-icons img:hover {
-    transform: scale(1.1);
+.math-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Image & credit */
+.math-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.math-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Credit text under image */
+.image-credit {
+    font-size: 0.7em;
+    color: #777;
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.image-credit a {
+    color: #777;
+    text-decoration: none;
+}
+
+.image-credit a:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+/* Content area */
+.math-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;              /* fills vertical space */
+    justify-content: space-between; /* pushes link to bottom */
+    padding: 20px;
+}
+
+.math-content h2 {
+    font-family: "Times New Roman", Times, serif;
+    color: #000;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.math-content p {
+    color: #333;
+    font-size: 1em;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.math-content a {
+    text-decoration: underline;  /* proper underline */
+    color: #000;                 /* black link */
+    font-weight: bold;
+    border-bottom: none;         /* removes that long line */
+    transition: color 0.3s ease;
+}
+
+.math-content a:hover {
+    color: #000;                 /* stays black on hover */
+    text-decoration-thickness: 2px; /* optional: make underline bolder on hover */
+}
+
+
+/* blog section */
+
+/* === BLOG SECTION === */
+.blog-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.blog-section h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+/* Grid layout */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* always 3 per row on large screens */
+    gap: 25px;
+    justify-items: center;
+}
+
+@media (max-width: 1000px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Each blog card */
+.blog-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Image at top of each card */
+.blog-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Text content inside */
+.blog-content {
+    padding: 20px;
+}
+
+.blog-content h2 {
+    font-family: "Times New Roman", Times, serif;
+    color: #000;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.blog-content p {
+    color: #333;
+    font-size: 1em;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.blog-content a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    transition: color 0.3s ease;
+}
+
+.blog-content a:hover {
+    color: #000;                 /* stays black on hover */
+    text-decoration-thickness: 2px; /* optional: make underline bolder on hover */
 }
