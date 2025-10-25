@@ -357,15 +357,6 @@ footer {
     margin-bottom: 40px;
 }
 
-/* Grid layout */
-.math-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px;
-    justify-content: center;
-    align-items: stretch;
-}
-
 /* Each card */
 .math-card {
     background: #fff;
@@ -385,10 +376,9 @@ footer {
 
 /* Image & credit */
 .math-image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
+    height: 220px;
+    object-fit: cover;
 }
 
 .math-image img {
@@ -408,9 +398,12 @@ footer {
     font-style: italic;
 }
 
-.image-credit a {
-    color: #777;
-    text-decoration: none;
+.image-credit {
+  font-size: 0.7em;
+  color: #777;
+  text-align: center;
+  margin: 8px 0 10px 0; /* adds breathing space */
+  font-style: italic;
 }
 
 .image-credit a:hover {
@@ -471,7 +464,7 @@ footer {
 }
 
 /* Grid layout */
-.blog-grid {
+.blog-grid, .math-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* always 3 per row on large screens */
     gap: 25px;

@@ -43,9 +43,17 @@
 
     <main>
         <p><center>Welcome to my collection of random stuff.</center></p>
+
+        <div class="filter-bar">
+            <button class="filter-btn active" data-topic="all">All</button>
+            <button class="filter-btn" data-topic="math">Mathematics</button>
+            <button class="filter-btn" data-topic="philosophy">Philosophy</button>
+            <button class="filter-btn" data-topic="social">Social</button>
+        </div>
+
         <section class="blog-section">
             <div class="blog-grid">
-                <div class="blog-card">
+                <div class="blog-card" data-topic="math">
                     <img src="img/puremath.png" alt="">
                     <div class="blog-content">
                         <h2>The Art of Useless Knowledge</h2>
@@ -58,7 +66,7 @@
                     </div>
                 </div>  
                 
-                <div class="blog-card">
+                <div class="blog-card" data-topic="social">
                     <img src="img/dunningkruger.png" alt="image.png">
                     <div class="blog-content">
                         <h2>Everyone in the Comment Section Is an Expert Now</h2>
@@ -73,5 +81,53 @@
             </div>
         </section>
     </main>
+
+    <!-- FILTER SCRIPT -->
+    <script>
+      const buttons = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.blog-card');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          // highlight active tab
+          buttons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+
+          const topic = button.dataset.topic;
+          cards.forEach(card => {
+            if (topic === 'all' || card.dataset.topic.split(' ').includes(topic)) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    </script>
+
+    <style>
+      .filter-bar {
+        text-align: center;
+        margin: 20px 0;
+      }
+      .filter-btn {
+        background: #eee;
+        border: none;
+        padding: 8px 14px;
+        margin: 0 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: 'Times New Roman', sans-serif;
+      }
+      .filter-btn.active {
+        background: #333;
+        color: white;
+      }
+      .filter-btn:hover {
+        background: #ccc;
+      }
+    </style>
+
+
 </body>
 </html>

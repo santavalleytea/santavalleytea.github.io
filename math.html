@@ -43,17 +43,27 @@
     <main>
     <section class="math-section">
         <h1>Mathematics Papers</h1>
+        <div class="filter-bar">
+            <button class="filter-btn active" data-topic="all">All</button>
+            <button class="filter-btn" data-topic="algebra">Algebra</button>
+            <button class="filter-btn" data-topic="numbertheory">Number Theory</button>
+            <button class="filter-btn" data-topic="analysis">Analysis</button>
+            <button class="filter-btn" data-topic="topology">Topology</button>
+            <button class="filter-btn" data-topic="philosophy">Philosophy</button>
+        </div>
+
         <div class="math-grid">
-            <div class="math-card">
+            <div class="math-card" data-topic="analysis" data-topic="numbertheory">
                 <div class="math-image">
                     <img src="img/pi.png" alt="">
+                </div>
                     <p class="image-credit">
                         "PI Island watermarked" by 
                         <a href="https://www.flickr.com/photos/21649179@N00/" target="_blank">fdecomite</a>
                         licensed under
                         <a href="https://creativecommons.org/licenses/by/2.0/?ref=openverse" target="_blank">CC BY 2.0</a>
                     </p>
-                </div>
+                
             
             <div class="math-content">
                 <h2>The Paradox of π</h2>
@@ -70,16 +80,17 @@
             </div>
         </div>
 
-        <div class="math-card">
+        <div class="math-card" data-topic="algebra">
             <div class="math-image">
                 <img src="img/poly.png" alt=""> 
+            </div>
                 <p class="image-credit">
                 "Quadratic formula via completing the square" by 
                 <a href="https://commons.wikimedia.org/wiki/User:Jacob_Rus" target="_blank">Jacob Rus</a>, 
                 licensed under 
                 <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
                 </p>
-            </div>
+            
         
             <div class="math-content">
                 <h2>The Insolvability of the Quintic</h2>
@@ -95,13 +106,14 @@
             </div>
         </div>
 
-        <div class="math-card">
+        <div class="math-card" data-topic="numbertheory">
             <div class="math-image">
                 <img src="img/fermats.png" alt=""> 
+            </div>
                 <p class="image-credit">
                 Image generated with OpenAI’s ChatGPT (DALL-E model)
                 </p>
-            </div>
+            
         
             <div class="math-content">
                 <h2>Proofs for Fermat's Little Theorem</h2>
@@ -117,5 +129,51 @@
         </div>
     </section>
     </main>
+
+    <!-- FILTER SCRIPT -->
+    <script>
+      const buttons = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.math-card');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          // highlight active tab
+          buttons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+
+          const topic = button.dataset.topic;
+          cards.forEach(card => {
+            if (topic === 'all' || card.dataset.topic.split(' ').includes(topic)) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    </script>
+
+    <style>
+      .filter-bar {
+        text-align: center;
+        margin: 20px 0;
+      }
+      .filter-btn {
+        background: #eee;
+        border: none;
+        padding: 8px 14px;
+        margin: 0 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: 'Times New Roman', sans-serif;
+      }
+      .filter-btn.active {
+        background: #333;
+        color: white;
+      }
+      .filter-btn:hover {
+        background: #ccc;
+      }
+    </style>
 </body>
 </html>
