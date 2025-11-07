@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godel</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">About</a></li>
+                <li><a href="../education.html">Experience</a></li>
+                <li><a href="../blogs.html">Blogs</a></li>
+                <li><a href="../math.html">Mathematics</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn" onclick="return false;">Guides</a>
+                    <div class="dropdown-content">
+                        <a href="../guides/math-guide.html">Mathematics</a>
+                    </div>
+                </li>
+                <li><a href="../projects.html">Projects</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://github.com/santavalleytea" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/takaya-ueno" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.goodreads.com/user/show/162324050-takaya-ueno" target="_blank" class="social-link">
+                    <i class="fab fa-goodreads"></i>
+                </a>
+                <a href="mailto:takayaueno0712@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2>The Limits of Mathematics</h2>
+        <center><img src="../img/godel.png" alt=".png" width="300">
+            <p style="
+                font-size: 0.7em;
+                color: #777;
+                text-align: center;
+                margin-top: 6px;
+                font-style: italic;
+            ">
+                "Kurt gödel colorized" by Photocolorization is licensed under CC BY-SA 4.0.
+            </p>
+        </center>
+        <p>
+            For a long time, mathematics has been regarded as the purest form of reason and a 
+            language that guarantees certainty. Before the existence of equations and proofs as
+            we know it today, philosophers looked for methods of reasoning that could guarantee
+            truth purely by structure. 
+            <br><br>
+            In <i>Organon</i>, Aristotle laid the foundation of <b>formal logic</b>, which is conceived to be
+            the study of inference. That is, the general principles by which, given a set of true assertions, one can
+            arrive at conclusions that must also be true, via a series of indubitable steps. A classic example is the
+            following:
+            <br><br>
+            <blockquote>
+                <p>
+                    <i>All men are mortal. <br>
+                    Socrates is a man. <br>
+                    Therefore, Socrates is mortal.</i>
+                </p>
+            </blockquote>
+            <br>
+            This is an example of a deductive argument, in particular, a <b>syllogism</b>. Note here that the validity
+            of it depends not on the content, but rather the form &mdash; if the two initial premises are true, then 
+            the conclusion must also be true. 
+            <br><br>
+            A few decades later, Euclid's <i>Elements</i> expanding on this vision from logical reasoning to the
+            field of mathematics. In what became the idea of <b>axiomatic method</b>, Euclid began with a finite 
+            set of <i>axioms</i> &mdash; simple and self-evident truths such as "Objects equal to the same thing are 
+            equal to one another" &mdash; and derived carefully, through a number of steps, the geometry of the plane.
+            Each theorem followed by necessity, as though reason itself was the driving force to mathematical truths.
+            <br><br>
+            This idea that all mathematical truths may ultimately be deduced from a consistent set of axioms became one
+            of the guiding methods of modern mathematics. Even as new fields emerged, such as topology, abstract algebra etc., 
+            the Euclidean ideal remained: mathematics is and should be a perfectly ordered deductive system. 
+            <br><br>
+            Fast forwarding into the twentieth century, this ideal (or dream) reached new heights by the German 
+            mathematician's proposal that all of mathematics could, in principle, be formalized. His vision, which 
+            was later known as <i>Hilbert's Program</i> sought not only to <i>complete</i> mathematics, but to prove
+            that it could never contradict itself; in his famous words: <i>“Wir müssen wissen. Wir werden wissen.”</i>
+            ("We must know. We will know.")
+            <br><br>
+            However, unfortunately for Hilbert, this grand dream of his was faced with an unexpected yet profound obstacle
+            laid out by a young logician <b>Kurt Gödel</b>, who showed that a complete and self-consistent mathematical
+            system was impossible.
+            <br><br>
+            <h3><b>Formal Systems and Arithmetic</b></h3>
+            Hilbert's dream was dependent on the belief that reasoning itself could be reduced to a mechanical process.
+            If every mathematical statement could be represented by a finite string of symbols, and if there were 
+            clear rules for how those strings were to be manipulated, then all mathematical truth could be derived
+            systematically.
+            <br><br>
+            Formally, define a <b>formal system</b> \(F\) as a triple <center>\(F = (\Sigma, A, R)\)</center>
+            where:
+            <ul style="margin-left: 3em;">
+                <li>\(\Sigma\) is a <b>finite alphabet</b> &mdash; a collection of symbols used to build expressions.
+                    For example, \(\{0, S, +, \times, =, \forall, \exists, \ldots\}\).
+                </li>
+                <li>\(A \subseteq \Sigma^*\) is a set of <b>axioms</b>; formulas taken
+                    to be true without proof.
+                </li>
+                <li>
+                    \(R\) is a set of <b>rules of inference</b>, which describes how to derive new strings (theorems)
+                    from old ones.
+                </li>
+            </ul>
+            A <b>theorem</b> is any formula that can be obtained from the axioms by finitely many application of these
+            rules. We write this \(A \vdash \varphi \) to mean that \(\varphi\) is <i>provable</i> from \(A\). Note that
+            \(\varphi\) is just a formula or statement in logic. 
+            <br><br>
+            A classic example of a formal system is the <b>Peano Arithmetic</b>. It is a way of writing down the
+            basic truths about the natural numbers \(0, 1, 2, 3, \ldots\) using only symbols and logical rules. 
+            <br><br>
+            The system has a small "alphabet" of symbols such as <center>\(0, S, +, \times, =, \forall\)</center>
+            in addition to others, but this will suffice for now. Here, \(\forall\) means "for all" and \(S(x)\)
+            means "the successor of \(x\)" &mdash; in other words, the number that comes right after \(x\). So 
+            \(S(0)\) is 1, \(S(S(0))\) is 2 and so on. Then, we write a few <b>axioms</b>; statements that we 
+            take to be true without proof. For example:
+            <ul style="margin-left: 3em;">
+                <li>\(\forall x(S(x) \neq 0)\) &mdash; 0 is not the successor of any number.</li>
+                <li>\(\forall x(x + 0 = x)\) &mdash; adding \(0\) doesn't change a number.</li>
+                <li>\(\forall x \forall y (x + S(y) = S(x+y))\) &mdash; adding a successor is like taking the successor after adding.</li>
+            </ul>
+            Finally, there is a rule called <b>induction</b>, whereby if something is true for \(0\), and if whenever
+            it's true for \(x\) it's also true for \(S(x)\), then it must be true for <i>all</i> numbers.
+            <br><br>
+            This is simply it. From just these starting points, the Peano Arithmetic can describe everything 
+            we normally do with whole numbers &mdash; whether it be addition, multiplication and even deeper
+            theorems that stems from the axioms, all through the manipulation of symbols. 
+            <br><br>
+            <h3><b>The Gödel Sentence</b></h3>
+            Hilbert's vision assumed that any mathematical truth could be captured by these formal symbols. Gödel took
+            this idea, and his genius, was to use those same symbols to show the limits of the system itself. He started 
+            off with a simple idea: basic arithmetic can describe basic arithmetic. 
+            <br><br>
+            Every symbol, such as \(0, S, +, \times, =, \forall, \implies, - , (, ),\ldots\) can be assigned a unique number.
+            For example, you might set \(0 \mapsto 1\), \(S \mapsto 2\), \(+ \mapsto 3\), \(\times \mapsto 4\) and so on. 
+            Then, a whole formula &mdash; say \(\forall x (S(x) \neq 0)\) &mdash; can be turned into a single number by
+            combining these codes uniquely. Gödel used what is called <b>prime numbers:</b>
+            <center>
+                \(\ulcorner \varphi \urcorner = 2^{n_1}3^{n_2}5^{n_3}\cdots p_k^{n_k}\)
+            </center>
+            where \(n_i\) is the number assigned to the \(i\)-th symbol in \(\varphi\), and \(p_i\) is the \(i\)-th prime.
+            Thus, every formula, proof or even a sequence of proofs can be represented as a unique number &mdash; called
+            its <b>Gödel number</b>.
+            <br><br>
+            Once we have this set up, we can describe syntactic relations arithmetically. To do this, define a relation
+            <center>\(\operatorname{Proof}_F (p,n)\)</center>
+            which means "\(p\) is the Gödel number of a valid proof in the system \(F\) of the formula whose Gödel number
+            is \(n\)". This importance here is that this relation can be expressed as an arithmetic formula. That is, 
+            the system can internally verify whether a number encodes a correct proof.
+            <br><br>
+            From here, Gödel defined what's called a <b>provability predicate</b>
+            <center>\(\operatorname{Provable}_F(n) := \exists p \operatorname{Proof}_F(p,n)\)</center>
+            where the left hand side reads: "there exists a number \(p\) that encodes a proof of the statement with 
+            number \(n\)". So within arithmetic itself, we can construct a sentence such as, 
+            <center>\(\operatorname{Provable})_F(\ulcorner 2 + 2 = 4 \urcorner)\)</center>
+            which means, "the formula \(2 + 2 = 4\) is provable in \(F\)".
+            <br><br>
+            Here comes the most interesting and key part of the story. Gödel built a statement that refers to its own
+            Gödel number. He did so by considering the formula
+            <center>\(\neg \operatorname{Provable}_F(x)\)</center>
+            which states "the formula with Gödel number \(x\) is not provable in \(F\)". By substituting the number
+            of that very formula into itself, Gödel obtained a sentence \(G\) such that, 
+            <center>\(F \vdash G \leftrightarrow \neg \operatorname{Provable}_F(\ulcorner G \urcorner)\)</center>
+            In words, \(G\) asserts the following:
+            <blockquote>
+                <p><i>"The statement with Gödel number \(\ulcorner G \urcorner\) (that is, this very sentence) is
+                    is not provable in \(F\)."</i></p>
+            </blockquote>
+            This is precisely the <b>Gödel sentence</b>. What's interesting here is that it is self-refential, but not
+            in a way that is ridiculously paradoxical, but every piece of the assertion is encoded precisely as arithmetic.
+            <br><br>
+            Now, we are left with two possible options:
+            <ol style="margin-left: 3em;">
+                <li>
+                    If \(F \vdash G\): the system proves a statement claiming it is <i>not provable</i>.
+                    This gives a contradiction &mdash; so \(F\) would be inconsistent.
+                </li>
+                <li>
+                    If \(F \nvdash G\): then \(G\) is unprovable in \(F\). But this is precisely what \(G\) states.
+                    Thus, \(G\) is true, despite the inability of \(F\) to prove it.
+                </li>    
+            </ol>
+            Hence, if \(F\) is consistent, then \(G\) is true but unprovable. This is <b>Gödel's First Incompleteness Theorem</b>.
+            It states that if \(F\) is consistent and capable of expressing via arithmetic, then \(F\) is incomplete. There
+            will always exist statements \(G\) such that neither \(G\) nor \(\neg G\) is provable in \(F\).
+            <br><br>
+            Without going in to too much detail, Gödel pushed the argument one step further. Let \(\operatorname{Cons}
+            (F)\) be a formula stating that "\(F\) is consistent". He showed that if \(F\) is consistent, then it cannot
+            prove this fact about itself:
+            <center>\(F \nvdash \operatorname{Cons}(F)\)</center>
+            So not only are there true but unprovable statements, the system cannot even prove its own soundness to begin
+            with.
+            <br><br>
+            <h3><b>The Limit of Formal Systems</b></h3>
+            Hilbert's dream was to prove that mathematics is both complete and consistent. However, this dream of his
+            had vanished when Gödel showed that these two simple could not coexist &mdash; if the system is consistent, it cannot
+            be complete, and if it is complete, it cannot be consistent.
+            <br><br>
+            Take the following analogy as an example. Suppose you pick up a book that claims that a particular
+            statement is a legitimate fact. Now, if this "system" can formally verify itself, it would be like 
+            checking the accuracy of the book using only the contents of the same book. If there is an error,
+            the book has no way of stepping outside itself to realize such an error. To truly confirm it, you would
+            require a reference that is beyond the book. This is what Gödel showed &mdash; mathematics too, needs to
+            step outside any one formal system to see its own consistency.
+            <br><br>
+            It is however, important to note that this outcome wasn't a failure of mathematics as a subject, 
+            but rather a revelation. While mathematics is and most likely will still be considered as the 
+            "language of logic" or in some cases "language of truth", that mathematical truth will always
+            reach beyond the formal rules we write to capture it. That is, there will always be truths that no finite
+            system of symbols can contain.
+        </p>
+    </main>
+</body>
+</html>
