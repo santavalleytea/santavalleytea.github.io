@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Godel</title>
+    <title>The Limits of Mathematics</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -89,8 +89,8 @@
             the Euclidean ideal remained: mathematics is and should be a perfectly ordered deductive system. 
             <br><br>
             Fast forwarding into the twentieth century, this ideal (or dream) reached new heights by the German 
-            mathematician's proposal that all of mathematics could, in principle, be formalized. His vision, which 
-            was later known as <i>Hilbert's Program</i> sought not only to <i>complete</i> mathematics, but to prove
+            mathematician, David Hilbert's proposal that all of mathematics could, in principle, be formalized. His vision, which 
+            was later known as <i>Hilbert's Program</i>, sought not only to <i>complete</i> mathematics, but to prove
             that it could never contradict itself; in his famous words: <i>“Wir müssen wissen. Wir werden wissen.”</i>
             ("We must know. We will know.")
             <br><br>
@@ -110,7 +110,7 @@
                 <li>\(\Sigma\) is a <b>finite alphabet</b> &mdash; a collection of symbols used to build expressions.
                     For example, \(\{0, S, +, \times, =, \forall, \exists, \ldots\}\).
                 </li>
-                <li>\(A \subseteq \Sigma^*\) is a set of <b>axioms</b>; formulas taken
+                <li>\(A \subseteq \Sigma^*\) is a set of formulas taken as <b>axioms</b>; formulas taken
                     to be true without proof.
                 </li>
                 <li>
@@ -119,7 +119,7 @@
                 </li>
             </ul>
             A <b>theorem</b> is any formula that can be obtained from the axioms by finitely many application of these
-            rules. We write this \(A \vdash \varphi \) to mean that \(\varphi\) is <i>provable</i> from \(A\). Note that
+            rules. We write this \(\Gamma \vdash \varphi \) to mean that \(\varphi\) is <i>provable</i> from \(\Gamma\). Note that
             \(\varphi\) is just a formula or statement in logic. 
             <br><br>
             A classic example of a formal system is the <b>Peano Arithmetic</b>. It is a way of writing down the
@@ -138,9 +138,8 @@
             Finally, there is a rule called <b>induction</b>, whereby if something is true for \(0\), and if whenever
             it's true for \(x\) it's also true for \(S(x)\), then it must be true for <i>all</i> numbers.
             <br><br>
-            This is simply it. From just these starting points, the Peano Arithmetic can describe everything 
-            we normally do with whole numbers &mdash; whether it be addition, multiplication and even deeper
-            theorems that stems from the axioms, all through the manipulation of symbols. 
+            This is the basic setup. From just these starting points, the Peano Arithmetic can express all standard arithmetic
+            reasoning, though (as Gödel showed) note prove all true statements.
             <br><br>
             <h3><b>The Gödel Sentence</b></h3>
             Hilbert's vision assumed that any mathematical truth could be captured by these formal symbols. Gödel took
@@ -156,19 +155,20 @@
             </center>
             where \(n_i\) is the number assigned to the \(i\)-th symbol in \(\varphi\), and \(p_i\) is the \(i\)-th prime.
             Thus, every formula, proof or even a sequence of proofs can be represented as a unique number &mdash; called
-            its <b>Gödel number</b>.
+            its <b>Gödel number</b>. <i>Note that \(\ulcorner \varphi \urcorner\) is one possible Gödel numbering.</i>
             <br><br>
             Once we have this set up, we can describe syntactic relations arithmetically. To do this, define a relation
             <center>\(\operatorname{Proof}_F (p,n)\)</center>
             which means "\(p\) is the Gödel number of a valid proof in the system \(F\) of the formula whose Gödel number
             is \(n\)". This importance here is that this relation can be expressed as an arithmetic formula. That is, 
-            the system can internally verify whether a number encodes a correct proof.
+            the relation '\(p\) is a valid proof of \(\varphi\)' is representable in arithmetic &mdash; meaning the Peano Axiom
+            can express it as a formula.
             <br><br>
             From here, Gödel defined what's called a <b>provability predicate</b>
             <center>\(\operatorname{Provable}_F(n) := \exists p \operatorname{Proof}_F(p,n)\)</center>
             where the left hand side reads: "there exists a number \(p\) that encodes a proof of the statement with 
             number \(n\)". So within arithmetic itself, we can construct a sentence such as, 
-            <center>\(\operatorname{Provable})_F(\ulcorner 2 + 2 = 4 \urcorner)\)</center>
+            <center>\(\operatorname{Provable}_F(\ulcorner 2 + 2 = 4 \urcorner)\)</center>
             which means, "the formula \(2 + 2 = 4\) is provable in \(F\)".
             <br><br>
             Here comes the most interesting and key part of the story. Gödel built a statement that refers to its own
@@ -189,7 +189,8 @@
             <ol style="margin-left: 3em;">
                 <li>
                     If \(F \vdash G\): the system proves a statement claiming it is <i>not provable</i>.
-                    This gives a contradiction &mdash; so \(F\) would be inconsistent.
+                    This gives a contradiction &mdash; that is, if \(F\) proves \(G\), then
+                    \(F\) would also prove its own unprovability claim, so \(F\) would be inconsistent.
                 </li>
                 <li>
                     If \(F \nvdash G\): then \(G\) is unprovable in \(F\). But this is precisely what \(G\) states.
@@ -209,7 +210,7 @@
             <br><br>
             <h3><b>The Limit of Formal Systems</b></h3>
             Hilbert's dream was to prove that mathematics is both complete and consistent. However, this dream of his
-            had vanished when Gödel showed that these two simple could not coexist &mdash; if the system is consistent, it cannot
+            was shattered when Gödel showed that these two properties could not coexist &mdash; if the system is consistent, it cannot
             be complete, and if it is complete, it cannot be consistent.
             <br><br>
             Take the following analogy as an example. Suppose you pick up a book that claims that a particular
@@ -220,8 +221,8 @@
             step outside any one formal system to see its own consistency.
             <br><br>
             It is however, important to note that this outcome wasn't a failure of mathematics as a subject, 
-            but rather a revelation. While mathematics is and most likely will still be considered as the 
-            "language of logic" or in some cases "language of truth", that mathematical truth will always
+            but rather a revelation. While mathematics is and most likely will continue to be, considered as the 
+            "language of logic" or in some cases the "language of truth", mathematical truth will always
             reach beyond the formal rules we write to capture it. That is, there will always be truths that no finite
             system of symbols can contain.
         </p>
