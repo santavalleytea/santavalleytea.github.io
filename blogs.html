@@ -5,24 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs by Takaya U.</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
 </head>
 <body>
     <header>
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">About</a></li>
-                <li><a href="education.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
                 <li><a href="blogs.html">Blogs</a></li>
-                <li><a href="math.html">Mathematics</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn" onclick="return false;">Guides</a>
-                    <div class="dropdown-content">
-                        <a href="guides/math-guide.html">Mathematics</a>
-                    </div>
-                </li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="personal.html">Personal</a></li>
             </ul>
             <div class="social-icons">
                 <a href="https://github.com/santavalleytea" target="_blank">
@@ -41,121 +37,94 @@
         </nav>
     </header>
 
+    <div class="page-banner">
+        <img src="img/banner.png" alt="Banner">
+    </div>
+
     <main>
-        <p><center>Welcome to my collection of random stuff.</center></p>
 
         <div class="filter-bar">
             <button class="filter-btn active" data-topic="all">All</button>
-            <button class="filter-btn" data-topic="math">Mathematics</button>
-            <!--<button class="filter-btn" data-topic="philosophy">Philosophy</button>-->
+            <button class="filter-btn" data-topic="algebra">Algebra</button>
+            <button class="filter-btn" data-topic="topology">Topology</button>
             <button class="filter-btn" data-topic="social">Social</button>
-            <button class="filter-btn" data-topic="pop">Pop Culture</button>
         </div>
 
-        <section class="blog-section">
-            <div class="blog-grid">
-                <div class="blog-card" data-topic="math">
-                    <img src="img/puremath.png" alt="">
-                    <div class="blog-content">
-                        <h2>The Art of Useless Knowledge</h2>
-                        <p>
-                            I often find myself in conversations where someone asks me, <i>"So what do you do with a math degree?</i>
-                            or <i>"What exactly do you learn?"</i> &mdash; questions that make me pause and wonder how to answer without sounding 
-                            like a man who's lost his mind.
-                        </p>
-                        <a href="blogs/artofuselessknowledge.html">Read More</a>
-                    </div>
-                </div>  
-                
-                <div class="blog-card" data-topic="social">
-                    <img src="img/dunningkruger.png" alt="image.png">
-                    <div class="blog-content">
-                        <h2>Everyone in the Comment Section Is an Expert Now</h2>
-                        <p>
-                            Scroll through Instagram or TikTok and you'll most likely notice that everyone's suddenly
-                            an expert; nutritionists, psychologists, climate scientists all conveniently broadcasting
-                            their self-proclaimed expertise in front of their phones or computer.
-                        </p>
-                        <a href="blogs/dunningkruger.html">Read More</a>
-                    </div>
-                </div>
+        <div class="edu-section" data-topic="algebra">
+            <h2>Algebra</h2>
+            <p>
+                <a href="blogs/coxeterrepresentation.html">Coxeter groups and the A<sub>2</sub> realization</a>:
+                a look at how the abstract definition of a Coxeter group can be represented
+                geometrically in the type \(A_2\) case &mdash; building from the group
+                formed by generators and relations to explicit reflection matrices in 
+                \(\mathbb{R}^2\), to the geometry of the equilateral triangle.  
+            </p>
+            <p>
+                <a href="blogs/godel.html">The Limits of Mathematics</a>:
+                on Gödel's incomplementness theorems and how a young logician 
+                broke Hilbert's dream of a complete and cosistent mathematics.
+            </p>
+        </div>
 
-                <div class="blog-card" data-topic="math">
-                  <img src="img/godel.png" alt="image.png">
-                  <div class="blog-content">
-                    <h2>The Limits of Mathematics</h2>
-                    <p>
-                        <i>Hilbert's Program</i> sought not only to <i>complete</i> mathematics, but to prove
-                        that it could never contradict itself.Unfortunately for Hilbert, this grand dream of his was faced with an unexpected yet profound obstacle
-                        laid out by a young logician <b>Kurt Gödel</b>, who showed that a complete and self-consistent mathematical
-                        system was impossible.
-                    </p>
-                    <a href="blogs/godel.html">Read More</a>
-                  </div>
-                </div>
-
-                <div class="blog-card" data-topic="math">
-                  <img src="img/lambdacalc.png" alt="image.png">
-                  <div class="blog-content">
-                    <h2>Category Theory and Functional Programming</h2>
-                    <p>
-                      I recently came across something called Category 
-                      Theory. This was important for me as I needed a foundational understanding at the very least to follow
-                      a PhD seminar I have been attending recently, but once I started to learn what it was, the more I began to 
-                      question myself: "what is this for?".
-                    </p>
-                    <a href="blogs/programmingcategorytheory.html">Read More</a>
-                  </div>
-                </div>
-            </div>
-        </section>
+        <div class="edu-section" data-topic="social">
+            <h2>Social</h2>
+            <p>
+                <a href="blogs/artofuselessknowledge.html">The Art of Useless Knowledge</a>:
+                a reflection on what it means to study pure mathematics, and why more often
+                than not, the best answer to the usefulness of it might simply be 
+                nothing at all. 
+            </p>
+            <p>
+                <a href="blogs/dunningkruger.html">Everyone in the Comment Section Is an Expert Now</a>:
+                On the Dunning-Kruger effect and why the internet has made everyone more informed yet
+                more confidently wrong at the same time.
+            </p>
+        </div>
     </main>
 
     <!-- FILTER SCRIPT -->
-    <script>
-      const buttons = document.querySelectorAll('.filter-btn');
-      const cards = document.querySelectorAll('.blog-card');
+<script>
+    const buttons = document.querySelectorAll('.filter-btn');
+    const sections = document.querySelectorAll('.edu-section[data-topic]');
 
-      buttons.forEach(button => {
+    buttons.forEach(button => {
         button.addEventListener('click', () => {
-          // highlight active tab
-          buttons.forEach(btn => btn.classList.remove('active'));
-          button.classList.add('active');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
 
-          const topic = button.dataset.topic;
-          cards.forEach(card => {
-            if (topic === 'all' || card.dataset.topic.split(' ').includes(topic)) {
-              card.style.display = 'block';
-            } else {
-              card.style.display = 'none';
-            }
-          });
+            const topic = button.dataset.topic;
+            sections.forEach(section => {
+                if (topic === 'all' || section.dataset.topic === topic) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
         });
-      });
-    </script>
+    });
+</script>
 
-    <style>
-      .filter-bar {
-        text-align: center;
-        margin: 20px 0;
-      }
-      .filter-btn {
+<style>
+    .filter-bar {
+        margin: 0 0 20px 0;
+    }
+    .filter-btn {
         background: #eee;
         border: none;
         padding: 8px 14px;
-        margin: 0 5px;
+        margin: 0 5px 0 0;
         border-radius: 5px;
         cursor: pointer;
-        font-family: 'Times New Roman', sans-serif;
-      }
-      .filter-btn.active {
+        font-family: 'IBM Plex Mono', monospace;
+    }
+    .filter-btn.active {
         background: #333;
         color: white;
-      }
-      .filter-btn:hover {
+    }
+    .filter-btn:hover {
         background: #ccc;
-      }
-    </style>
+    }
+</style>
 
 
 </body>

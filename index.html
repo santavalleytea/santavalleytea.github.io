@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Takaya U.</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -13,16 +13,10 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">About</a></li>
-                <li><a href="education.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
                 <li><a href="blogs.html">Blogs</a></li>
-                <li><a href="math.html">Mathematics</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn" onclick="return false;">Guides</a>
-                    <div class="dropdown-content">
-                        <a href="guides/math-guide.html">Mathematics</a>
-                    </div>
-                </li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="personal.html">Personal</a></li>
             </ul>
             <div class="social-icons">
                 <a href="https://github.com/santavalleytea" target="_blank">
@@ -41,31 +35,47 @@
         </nav>
     </header>
 
-    <main>
-        <h1>Takaya U.</h1>
-        <div class="profile-photo">
-            <img src="img/main.jpg" alt="Takaya Ueno">
-        </div>
+    <div class="page-banner">
+        <img src="img/banner.png" alt="Banner">
+    </div>
 
-        <div class="social-icons">
-            <a href="https://github.com/santavalleytea" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/takaya-ueno" target="_blank" class="social-link">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="mailto:takayaueno0712@gmail.com" class="social-link">
-                <i class="fas fa-envelope"></i>
-            </a>
-        </div>
-        <div class="intro-box">
-        <p>
-            My name is Takaya and I am currently doing my honours year in pure mathematics at the 
-            University of Sydney, working on my thesis with a focus on Coxeter groups, Pregalleries
-            and Mikado braids. 
-            <br><br>
-            Here, you'll find various writings and projects regarding my interests. 
-        </p>
+    <main>
+        <div class="about-layout">
+            <div class="about-image">
+                <img src="img/main.jpg" alt="Takaya Ueno">
+            </div>
+            <div class="about-text">
+                <h1>Takaya U.</h1>
+                <div class="intro-box">
+                    <p>
+                        My name is Takaya and I am currently an honours student in pure mathematics
+                        at the University of Sydney. 
+                    </p>
+                        
+                    <p>
+                        My current honours thesis, supervised by Professor Oded Yacobi and Postdoctoral Fellow
+                        Edmund Heng, 
+                        concerns the combinatorics of finite Coxeter groups. 
+                        I am mainly working towards showing that the class of Mikado braids coincides 
+                        with the class of one-step pregalleries; a problem that draws on the 
+                        geometric representation of finite Coxeter groups and some ideas from algebraic topology, 
+                        particularly on fundamental groupoids.
+                    </p>
+                    <p>
+                        Broadly speaking, I am interested in group theory and algebraic topology: the way in which
+                        groups encode symmetry, and the way tools such as the fundamental group reveals hidden structures
+                        of particular spaces.
+                    </p>
+                    <p>
+                        My education and extracurriculars can be viewed in the 
+                        <a href="education.html">Education</a> section, some blogs
+                        that I have written regarding pretty much anything that interests
+                        me can be found in the <a href="blogs.html">Blog</a> section, and 
+                        anything related to my personal interests outside of mathematics 
+                        can be found in the <a href="personal.html">Personal</a> section.
+                    </p>
+                </div>
+            </div>
         </div>
     </main>
 </body>
