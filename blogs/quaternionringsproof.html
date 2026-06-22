@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Center of the Real Hamilton Quaternions</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">About</a></li>
+                <li><a href="../education.html">Experience</a></li>
+                <li><a href="../blogs.html">Blogs</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../personal.html">Personal</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://github.com/santavalleytea" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/takaya-ueno" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.goodreads.com/user/show/162324050-takaya-ueno" target="_blank" class="social-link">
+                    <i class="fab fa-goodreads"></i>
+                </a>
+                <a href="mailto:takayaueno0712@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2>The Center of the Real Hamilton Quaternions</h2>
+        <p>
+            We aim to prove the following:
+            <div class="def">
+                <span class="def-title">
+                    Proposition 1.1.
+                </span>
+                \(A := \{a + bi \mid a,b \in \mathbb{R}\}\) is a subring of \(\mathbb{H}\)
+                in which \(A\) is a field but is not contained in the center of \(\mathbb{H}\). 
+            </div>
+            Before proceeding, we first define the real Hamilton Quaternions, as well as the 
+            center of a ring. 
+            <div class="def">
+                <span class="def-title">
+                    Definition 1.2.
+                </span>
+                The real Hamilton Quaternions, denoted by \(\mathbb{H}\), is a collection of elements of the
+                form \(a + bi + cj + dk\) where \(a,b,c,d \in \mathbb{R}\). The relation is defined via the following:
+                $$
+                    i^2 = j^2 = k^2 = -1 = ijk, \ ij = -ji = k, \ jk= -kj = i, \ ki = -ik = j
+                $$
+            </div>
+            Addition is defined component wise: 
+            $$
+                (a+bi + cj + dk) + (x + yi + wj + zk) = (a + x) + (b+y)i + (c + w)j + (d + z)k
+            $$
+            and multiplication is defined by expanding the following:
+            $$
+                (a+bi + cj + dk)(x + yi + wj + zk)
+            $$
+            Note that \(\mathbb{H}\) is a non-commutative ring, so the order of terms when using the distributive law
+            matters.
+            <div class="def">
+                <span class="def-title">
+                    Definition 1.3.
+                </span>
+                The center of a ring is defined by:
+                $$
+                    Z(R) = \{z \in R \mid zr = rz\ \  \forall r \in R\}
+                $$
+                where R is a ring. 
+            </div>
+            That is, the set of all elements that commutes with every element in \(R\). <br><br>
+            <i>Proof.</i> We first describe the center of \(\mathbb{H}\). Let \(q = a + bi + cj + dk\) and suppose we take
+            \(i\) and multiply it on the right; i.e. \(qi\). We want to show under what circumstances this commutes:
+            \begin{align*}
+                &qi = ai + bi^2 + cji + dki = ai - b + c(-k) + dj = ai-b-ck + dj\\
+                &iq = ai + bi^2 + cij + dik = ai- b + c(k) + d(-j) = ai - b + ck - dj
+            \end{align*}
+            Equating the two, we get:
+            $$
+                qi = iq \implies ai - b-ck + dj = ai-b + ck -dj \implies -2ck=-2dj \implies ck = dj
+            $$
+            Since \(\mathbb{H} = \mathbb{R} \oplus \mathbb{R}i \oplus \mathbb{R}j \oplus \mathbb{R}k\), that is, the
+            components are linearly independent, it must be that \(c = 0\) and \(d = 0\). Similarly, if we multiply \(q\)
+            with \(j\), we will obtain the fact that \(b = 0\). Hence, leaving only the \(a\) component. Therefore, commuting 
+            with each component \(i,j, k\) forces \(q = a\) and so we have:
+            $$
+                Z(\mathbb{H}) := \{a + 0i + 0j + 0k \mid a \in \mathbb{R}\}
+            $$
+            We now show that \(A:= \{a+bi \mid a,b \in \mathbb{R}\}\) is a subring of \(\mathbb{H}\) and that it is in fact, 
+            a field. Clearly, the identity element of \(\mathbb{H}\), define by \(1_\mathbb{H} = 1 + 0i + 0j + 0k \in A\).
+            Suppose \(a + bi, \ a'+b'i \in A\):
+            \begin{align*}
+                &(a+bi)(a'+b'i) = (aa') + (ab' i + ba' i) + (bb'i^2 ) = (aa' - bb') + (ab' + ba') i \in A\\
+                &(a+bi) - (a'+b'i) = (a-a') + (b-b')i \in A
+            \end{align*}
+            Since \(A\) contains the identity of \(\mathbb{H}\), is closed under multiplication and subtraction,
+            via the subring criterion, \(A\) is indeed a subring of \(\mathbb{H}\). <br><br>
+            To show that \(A\) is a field, it is sufficient to show that the elements must commute under multiplication, and every element
+            has a multiplicative inverse, since we have already shown that it is a ring. 
+            $$
+                (a+bi)(a'+b'i) = (aa' - bb') + (ab' + ba') i = (a'a - b'b) + (b'a + a'b)i = (a'+b'i)(a+bi)
+            $$
+            Note that the commutativity of the elements in the bracket is possible since \(\mathbb{R}\) is commutative.
+            $$
+                (a+bi)^{-1} = \frac{1}{a+bi} = \frac{1}{a+bi} \cdot \frac{a-bi}{a-bi} = \frac{a-bi}{a^2 + b^2}
+                = \frac{1}{a^2 + b^2}a - \frac{1}{a^2 + b^2} bi \in A
+            $$
+            Hence, \(A\) is a field. Observe that \(A\) is not included in \(Z(\mathbb{H})\) since 
+            the only element from \(A\) that is in \(Z(\mathbb{H})\) is when \(b = 0\). That is, 
+            \(a + 0i \in Z(\mathbb{H})\). However, since the \(i\) component in \(Z(\mathbb{H})\) is always
+            \(0\), for any \(b \neq 0\), elements of \(A\) are not contained in \(Z(\mathbb{H})\). e.g. \(3 + 2i \in A\),
+            but \(3 + 2i \notin Z(\mathbb{H})\).
+        </p>
+    </main>
+</body>
+</html>
